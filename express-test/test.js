@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.post('/', function (req, res) {
 	const r = { bd: req.body, method: 'http'};
-	fetch('http://logstash:5000', {method: 'POST', body: JSON.stringify(r)});
+	fetch('http://localhost:5000', {method: 'POST', body: JSON.stringify(r)});
 	res.send('Hello World!');
 });
 
